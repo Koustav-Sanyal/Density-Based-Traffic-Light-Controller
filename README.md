@@ -28,15 +28,17 @@ Arduino UNO is the main part of this project and it will be used to read from ul
 
 
  
- The Circuit Diagram for this project is shown as:
+ # The Circuit Diagram for this project is shown as:
  
  
-![density_based_traffic_light_controller_bb_M2YCKtd7PL](https://user-images.githubusercontent.com/64331214/122291884-fa432f00-cf12-11eb-9a42-a8917302174b.png)
+ 
+   ![density_based_traffic_light_controller_bb_M2YCKtd7PL](https://user-images.githubusercontent.com/64331214/122291884-fa432f00-cf12-11eb-9a42-a8917302174b.png)
 
 
 
-                                            Working of Density Based Traffic Light Controller Using Arduino:
-The working of the project is divided into three steps
+ #  Working of Density Based Traffic Light Controller Using Arduino:
+ 
+The working of the project is divided into three steps:
 
 1> If there is traffic at all the signals, then the system will work normally by controlling the signals one by one.
 
