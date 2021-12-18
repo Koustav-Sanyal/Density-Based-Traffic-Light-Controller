@@ -18,8 +18,8 @@ volatile int S1, S2, S3, S4;           // Variables for storing the distance cov
 int t = 5;  // distance under which it will look for vehicles.
 void setup(){
   Serial.begin(115200);
-  Timer1.initialize(100000);  //Begin using the timer. This function must be called first. "microseconds" is the period of time the timer takes.
-  Timer1.attachInterrupt(softInterr); //Run a function each time the timer period finishes.
+  Timer1.initialize(100000);  
+  Timer1.attachInterrupt(softInterr); //To run a function each time the timer period finishes.
   // Declaring LED pins as output
   for(int i=0; i<3; i++){
     pinMode(signal1[i], OUTPUT);
@@ -60,7 +60,7 @@ void loop()
     signal4Function();
   }
 }
-// This is interrupt function and it will run each time the timer period finishes. The timer period is set at 100 milli seconds.
+// This is to interrupt function which will run each time the timer period finishes. The timer period is set at 100 milli seconds.
 void softInterr()
 {
   // Reading from first ultrasonic sensor
@@ -95,7 +95,7 @@ void softInterr()
   digitalWrite(triggerpin4, LOW);
   time = pulseIn(echopin4, HIGH); 
   S4= time*0.034/2;
-  // Print distance values on serial monitor for debugging
+  // Printing distance values on serial monitor for debugging
   Serial.print("S1: ");
   Serial.print(S1);
   Serial.print("  S2: ");
@@ -109,14 +109,14 @@ void signal1Function()
 {
   Serial.println("1");
   low();
-  // Make RED LED LOW and make Green HIGH for 5 seconds
+  
   digitalWrite(signal1[0], LOW);
   digitalWrite(signal1[2], HIGH);
   delay(redDelay);
-  // if there are vehicels at other signals
+  // if there are vehicles at other signals
   if(S2<t || S3<t || S4<t)
   {
-    // Make Green LED LOW and make yellow LED HIGH for 2 seconds
+    // Making Green LED LOW and make yellow LED HIGH for 2 seconds
     digitalWrite(signal1[2], LOW);
     digitalWrite(signal1[1], HIGH);
     delay(yellowDelay);
