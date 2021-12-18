@@ -2,7 +2,7 @@
 A  Smart Traffic Light Controller that ensures that signal of a particular direction should only function if there is traffic in that direction.
 
 
-                                Components Required for Density Based Traffic Light Controller Using Arduino Mega
+                 Components Required for Density Based Traffic Light Controller Using Arduino Mega
 
 The components you are going to require for this project are as follows:
 
