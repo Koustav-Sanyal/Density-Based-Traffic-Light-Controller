@@ -49,7 +49,7 @@ The working of the project is divided into three steps:
 
 3> If there is no traffic at all the 4 signals, system will stop at the current signal and will only move on the next signal if there will be traffic at any other signal.
 
-4> The traffic at a signal is found by considering whether any object is present within 5cm distance from the ultrasonic sensor. The distance is determined by emitting ultrasonic waves from the HC-SR04 ultrasonic sensors, and calculating the time after which the echo is received if the waves reflect back after striking any nearby object. Then the distance of the object from the sensor is calculated by the formula: (Distance = Speed of wave * Time taken to hear the echo/2). 
+
 
 If the distance comes to be greater than 5cm, then the LEDs do not operate, or else they come under operation.
 
