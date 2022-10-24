@@ -3,8 +3,8 @@ int signal1[] = {23, 25, 27};
 int signal2[] = {46, 48, 50};
 int signal3[] = {13, 12, 11};
 int signal4[] = {10, 9, 8};
-int redDelay = 5000;
-int yellowDelay = 2000;
+int rDelay = 5000;
+int yDelay = 2000;
 volatile int triggerpin1 = 31;    
 volatile int echopin1 = 29;       
 volatile int triggerpin2 = 44;     
@@ -112,7 +112,7 @@ void signal1Function()
   
   digitalWrite(signal1[0], LOW);
   digitalWrite(signal1[2], HIGH);
-  delay(redDelay);
+  delay(rDelay);
   // if there are vehicles at other signals
   if(S2<t || S3<t || S4<t)
   {
@@ -128,7 +128,7 @@ void signal2Function()
   low();
   digitalWrite(signal2[0], LOW);
   digitalWrite(signal2[2], HIGH);
-  delay(redDelay);
+  delay(rDelay);
   
   if(S1<t || S3<t || S4<t)
   {
@@ -143,7 +143,7 @@ void signal3Function()
   low();
   digitalWrite(signal3[0], LOW);
   digitalWrite(signal3[2], HIGH);
-  delay(redDelay);
+  delay(rDelay);
   if(S1<t || S2<t || S4<t)
   {
     digitalWrite(signal3[2], LOW);
@@ -157,7 +157,7 @@ void signal4Function()
   low();
   digitalWrite(signal4[0], LOW);
   digitalWrite(signal4[2], HIGH);
-  delay(redDelay);
+  delay(rDelay);
   if(S1<t || S2<t || S3<t)
   {
     digitalWrite(signal4[2], LOW);
